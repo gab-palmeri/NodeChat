@@ -8,7 +8,8 @@ app.get('/',function(req, res) {
 
 app.use('/',express.static(__dirname + '/public'));
 
-serv.listen(2000);
+serv.listen(process.env.PORT || 5000)
+
 console.log("Server listening on port 2000");
 
 var SOCKET_LIST = {};
